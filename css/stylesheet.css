@@ -1,7 +1,199 @@
-/* FILEPATH: /g:/マイドライブ/2024/portfolio/css/stylesheet.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    background: linear-gradient(to bottom right, #add8e6, #1e90ff); /* Градиент с левого верхнего угла до правого нижнего */
-    height: 100vh;
+    background: linear-gradient(to bottom right, #add8e6, #1e90ff);
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h3, h4 {
+    font-weight: bold;
+}
+
+.language-buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+
+    
+}
+
+.lang-button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+    background: linear-gradient(to bottom right, #add885, #1e90ff);
+    color: rgb(34, 34, 53); /* Белый текст */
+    border: none; /* Без рамки */
+    border-radius: 25px; /* Овальная форма */
+    cursor: pointer; /* Курсор в виде руки */
+    font-size: 16px; /* Размер текста */
+    transition: background-color 0.3s; /* Плавный переход для фона */
+}
+/* Эффект наведения на кнопку */
+.lang-button:hover {
+    background-color: #45a049; /* Темно-зеленый при наведении */
+}
+
+/* Эффект фокуса на кнопке */
+.lang-button:focus {
+    outline: none; /* Убираем контур при фокусе */
+    box-shadow: 0 0 10px rgba(72, 190, 87, 0.7); /* Легкая тень при фокусе */
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+.profile {
+    margin-right: 30px;
+    text-align: left;
+}
+
+#name {
+    font-size: 6em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#bio, #shoukaitext {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Описание секции About */
+#about {
+    padding: 50px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#rirekishou {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Сетка для разделов */
+.rirekishou-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+.group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.group .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.group .icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.group .text {
+    font-size: 1.6em;
+}
+
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.skill-item {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 1.4em;
+    display: inline-block;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+    }
+
+    .portfolio {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 15px;
+    }
+
+    .image-container img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #name {
+        font-size: 4em;
+    }
+
+    #bio {
+        font-size: 1.4em;
+    }
+
+    #about {
+        padding: 30px 15px;
+    }
+
+    .rirekishou-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rirekishou-content li {
+        width: 100%;
+    }
+
+    .group {
+        grid-template-columns: 1fr;
+    }
 }

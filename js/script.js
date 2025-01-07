@@ -1,59 +1,79 @@
+
+function bindDataToElements(data) {
+    Object.keys(data).forEach(key => {
+        // Поиск элемента по ID
+        const element = document.getElementById(key);
+        // Поиск элемента по классу
+        const elementsByClass = document.getElementsByClassName(key);
+
+        if (element) {
+            updateElementContent(element, data[key]);
+        }
+
+        // Обновляем все элементы с указанным классом, избегая конфликта с ID
+        if (elementsByClass.length > 0 && !element) {
+            Array.from(elementsByClass).forEach(el => {
+                updateElementContent(el, data[key]);
+            });
+        }
+    });
+}
+
+// Функция обновления содержимого элемента
+function updateElementContent(element, value) {
+    if (Array.isArray(value)) {
+        element.innerHTML = ''; // Очищаем список
+        value.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            element.appendChild(li);
+        });
+    } else {
+        element.textContent = value;
+    }
+}
+
 // Функция для загрузки JSON файла с переводами
 function loadLanguage(lang) {
-    const url = `/js/${lang}.json`;  // Путь к файлу перевода
+    const url = `../js/${lang}.json`; // Путь к файлу перевода
 
-    // Запрашиваем файл с переводом
     fetch(url)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Ошибка загрузки перевода: ${response.statusText}`);
             }
-            return response.json();  // Преобразуем ответ в JSON
+            return response.json();
         })
         .then(data => {
-            // Привязываем данные из JSON к элементам HTML
-
-            if (data.name) document.getElementById('name').textContent = data.name;
-            if (data.age) document.getElementById('age').textContent = `Возраст: ${data.age}`;
-            if (data.bio) document.getElementById('bio').textContent = data.bio;
-
-            // Создаём список навыков
-            const skillsList = document.getElementById('skills');
-            skillsList.innerHTML = '';  // Очищаем текущий список
-            if (data.skills) {
-                data.skills.forEach(skill => {
-                    const li = document.createElement('li');
-                    li.textContent = skill;
-                    skillsList.appendChild(li);
-                });
-            }
+            // Используем универсальную функцию для обработки данных
+            bindDataToElements(data);
         })
         .catch(error => {
             console.error('Ошибка:', error);
         });
 }
 
-// Переключение языка, например, при нажатии на кнопку
+// Переключение языка
 function switchLanguage(lang) {
     localStorage.setItem('language', lang); // Сохраняем выбранный язык
     loadLanguage(lang); // Загружаем новый язык
 }
 
-// Функция для загрузки языка из localStorage или по умолчанию
+// Загрузка языка из localStorage или по умолчанию
 function loadLanguageFromStorage() {
-    const savedLang = localStorage.getItem('language'); // Проверяем, есть ли сохранённый язык
+    const savedLang = localStorage.getItem('language');
     if (savedLang) {
-        loadLanguage(savedLang); // Если язык найден, загружаем его
+        loadLanguage(savedLang);
     } else {
-        loadDefaultLanguage(); // Если нет, определяем язык браузера
+        loadDefaultLanguage();
     }
 }
 
-// Функция для определения языка по умолчанию (можно дополнить проверкой языка браузера)
+// Установка языка по умолчанию
 function loadDefaultLanguage() {
-    const defaultLang = 'ru';  // Можешь сделать дефолт на 'ru' или какой-то другой
-    localStorage.setItem('language', defaultLang); // Сохраняем дефолтный язык
-    loadLanguage(defaultLang); // Загружаем дефолтный язык
+    const defaultLang = 'ru'; // Язык по умолчанию
+    localStorage.setItem('language', defaultLang);
+    loadLanguage(defaultLang);
 }
 
 // Загружаем язык при загрузке страницы

@@ -1,6 +1,16 @@
 {
-    "name": "Kate",
-    "age": "Age: 25",
-    "bio": "I love programming, design, and mountains.",
-    "skills": ["HTML", "CSS", "JavaScript"]
+    "name": "Basloviak Eugenia",
+    "bio": "Junior Web Developer",
+    "shoukaitext": "С 2013 года я работала инженером тестирования и\nтеперь хочу попробовать новые пути развидития в Айти",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "rirekishou": "Резюме",
+    "keiken": "Опыт работы",
+    "skiru": "Навыки",
+    "job_places": "Wikimart.ru",
+    "job_places2": "Premium IT Solution",
+    "job_places3": "MD Audit / Qvalon",
+    "job_places4": "Jcat Service",
+    "occupation": "QA Engenier, E-commerce"
+
+    
 }
