@@ -14,7 +14,7 @@
     </div>
 
     <!-- Первый экран - Портфолио -->
-    <section class="portfolio">
+    <section class="shoukai">
         <div class="profile">
             <h1 id="name"></h1> <!-- name-->
             <p id="bio"></p> <!-- bio -->
@@ -28,56 +28,86 @@
     <!-- About // 2nd screen -->
     <section id="about">
         <div class="container">
-            <section id="resume">
+            <section class="resume">
                 <div id="rirekishou"></div>
                 <div class="rirekishou-content">
                     <!-- Первая строка: Опыт работы и Навыки -->
                     <div class="item">
                         <h3 id="keiken"></h3>
-                        <ul>
-                            <li>
+                        <div class="resume_card">
                                 <span class="year">2013</span>
                                 <div class="icon">💼</div>
+                            <div class="flex">
+
                                 <span id="job_places"></span>
                                 <p class="occupation"></p>
-                            </li>
-                            <li>
+                            </div>
+                            </div>
+                            <div class="resume_card">
                                 <span class="year">2020</span>
                                 <div class="icon">💼</div>
+                            <div class="flex">
+
                                 <span id="job_places2"></span>
                                 <p class="occupation"></p>
-                            </li>
-                            <li>
+                                </div>
+                            </div>
+                            <div class="resume_card">
                                 <span class="year">2023</span>
                                 <div class="icon">💼</div>
+                            <div class="flex">
+
                                 <span id="job_places3"></span>
                                 <p class="occupation"></p>
-                            </li>
-                        </ul>
+                            </div>
+                            </div>
                     </div>
                     <div class="item">
                         <h3 id="skiru"></h3>
-                        <ul id="skills">
-                            <li>JavaScript</li>
-                            <li>CSS</li>
-                            <li>React</li>
-                        </ul>
+                        <div class="flex2">
+                        <span class="skills" id="skills"></span></div>
                     </div>
                     <!-- Вторая строка: Образование и Квалификации -->
                     <div class="item">
                         <h3 id="edu"></h3>
-                        <ul>
-                            <li>
-                                <span class="year">2013</span>
-                                <span id="job_places"></span>
-                            </li>
-                        </ul>
-                    </div>
+                        
+                        <!-- Первая карточка -->
+                        <div class="resume_card">
+                            <span class="year">2011</span>
+                            <div class="icon">✍🏼</div>
+                            <div class="flex">
+                            <span id="education_section3"></span>
+                            <p class="edu_item"></p>
+                           </div>
+                        </div>   
+                        
+                        <!-- Вторая карточка -->
+                        <div class="resume_card">
+                            <span class="year">2023</span>
+                            <div class="icon">✍🏼</div>
+                            <div class="flex">
+                            <span id="education_section1"></span>
+                            <p class="edu_item2"></p>
+                            </div>
+                        </div>
+                    
+                        <!-- Третья карточка -->
+                        <div class="resume_card">
+                            <span class="year">2026</span>
+                            <div class="icon">✍🏼</div>
+                            <div class="flex">
+                                <span id="education_section2"></span>
+                                <p class="edu_item3"></span>
+                            </div>
+                        </div>
+                    </div>                    
                     <div class="item">
                         <h3 id="shikaku"></h3>
-                        <ul>
-                            <li>Курс по программированию</li>
-                        </ul>
+                        <div class="flex">
+                            <span id="patf"></span>
+                            <p class="jlpt"></span>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -85,16 +115,85 @@
     </section>
 
     <!-- Четвертый экран - Контактная информация -->
-    <section id="contact">
-        <div class="container">
-            <!-- Здесь будет контактная информация -->
+<section id="port">
+    <div class="container">
+        <div id="portfolio"></div>
+        <section class="portfolio_card">
+            
+            <div class="image-container2">
+            <img src="/images/photo_2024-10-24_00-09-34.jpg" alt="project screenshot"></div>
+            <p id="portfolio_text"></p>
+            </section>
+        <section class="portfolio_card">
+                
+                <div class="image-container2">
+                <img src="/images/Screenshot_5.png" alt="project screenshot about capybara"></div>
+                <p id="portfolio_text2"></p>
+        </section>
+    </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
         </div>
     </section>
 
+
+    <section>
+        <div id="hobby"></div>
+        <div class="carousel-container">
+            <!-- Слайды -->
+            <div class="carousel-slide fade">
+                <img src="/images/image1.jpg" alt="Image 1">
+                <div class="caption">Описание картинки 1</div>
+            </div>
+    
+            <div class="carousel-slide fade">
+                <img src="/images/image2.jpg" alt="Image 2">
+                <div class="caption">Описание картинки 2</div>
+            </div>
+    
+            <div class="carousel-slide fade">
+                <img src="/images/image3.jpg" alt="Image 3">
+                <div class="caption">Описание картинки 3</div>
+            </div>
+    
+            <div class="carousel-slide fade">
+                <img src="/images/image4.jpg" alt="Image 4">
+                <div class="caption">Описание картинки 4</div>
+            </div>
+    
+            <div class="carousel-slide fade">
+                <img src="/images/image5.jpg" alt="Image 5">
+                <div class="caption">Описание картинки 5</div>
+            </div>
+    
+            <!-- Кнопки вперёд и назад -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    
+        <!-- Точки-кружочки -->
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    
+    </section>
     <!-- Футер -->
     <footer>
         <div class="container">
-            <p>&copy; 2024, Все права защищены</p>
+            <p>&copy; 2025, Все права защищены</p>
         </div>
     </footer>
 

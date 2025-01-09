@@ -1,16 +1,29 @@
 {
-    "name": "バスロビャク \n ‐エヴァ‐　エウゲニア",
-    "bio": "WEBエンジニア",
-    "shoukaitext": "С 2013 года я работала инженером тестирования и\nтеперь хочу попробовать новые пути развидития в Айти",
-    "skills": ["HTML", "CSS", "JavaScript"],
+    "name": "バスロビャク \n エフゲニア",
+    "bio": "ジュニアウェブ開発者",
+    "shoukaitext": "2013年からテストエンジニアとして働いており、IT業界で新しい道を試したいと考えています。歯が痛いときはぜひ私たちのところへお越しください。治します！他にどんな文章を書けばよいか分かりません。",
+    "skills": ["HTML", "CSS", "JavaScript", "Java", "SQL", "Linux", "Bash", "k8s"],
     "rirekishou": "履歴書",
     "keiken": "職務経験",
     "skiru": "スキル",
+    "edu": "学歴",
+    "shikaku": "資格",
     "job_places": "Wikimart.ru",
     "job_places2": "Premium IT Solution",
     "job_places3": "MD Audit / Qvalon",
     "job_places4": "Jcat Service",
-    "occupation": "QA Engenier, E-commerce"
-
-    
+    "occupation": "QAエンジニア、Eコマース",
+    "education_section1": "ISI日本語学校、東京",
+    "education_section2": "アーツカレッジヨコハマ",
+    "education_section3": "モスクワMGUPI",
+    "edu_item": "機械工学自動化エンジニア",
+    "edu_item2": "日本語",
+    "edu_item3": "ITコース",
+    "patf": "PATF 3級",
+    "jlpt": "日本語JLPT N3",
+    "portfolio": "ポートフォリオ",
+    "portfolio_text": "学生はストレスが多いと感じていたため、ストレス軽減をサポートするウェブサービスを開発中です。呼吸法の練習やストレスメーターを含む最初のバージョンは3月にリリース予定です。",
+    "portfolio_text2": "友達がランチタイムに退屈しないように、彼女のために楽しいゲームサイトを作っています！ここではプニマルというカピバラをクリックして、プニプニの数を数えるゲームが楽しめます！",
+    "caption": "日本への旅行はいつもワクワクします！",
+    "hobby": "趣味と興味！"
 }

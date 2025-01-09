@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
 
 body {
     background: linear-gradient(to bottom right, #add8e6, #1e90ff);
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans';
+}
+html[lang="jp"] body {
+    font-family: 'Yuji Syuku', serif;
 }
 
 h3, h4 {
@@ -14,8 +18,6 @@ h3, h4 {
     display: flex;
     justify-content: flex-end;
     padding: 10px;
-
-    
 }
 
 .lang-button {
@@ -26,25 +28,21 @@ h3, h4 {
     border: none;
     border-radius: 100px;
     background: linear-gradient(to bottom right, #add885, #1e90ff);
-    color: rgb(34, 34, 53); /* Белый текст */
-    border: none; /* Без рамки */
-    border-radius: 25px; /* Овальная форма */
-    cursor: pointer; /* Курсор в виде руки */
+    color: #053225;
     font-size: 16px; /* Размер текста */
     transition: background-color 0.3s; /* Плавный переход для фона */
 }
-/* Эффект наведения на кнопку */
+
 .lang-button:hover {
     background-color: #45a049; /* Темно-зеленый при наведении */
 }
 
-/* Эффект фокуса на кнопке */
 .lang-button:focus {
     outline: none; /* Убираем контур при фокусе */
     box-shadow: 0 0 10px rgba(72, 190, 87, 0.7); /* Легкая тень при фокусе */
 }
 
-.portfolio {
+.shoukai {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -53,7 +51,7 @@ h3, h4 {
     height: 60vh;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 50px 30px;
     box-sizing: border-box;
 }
 
@@ -67,9 +65,11 @@ h3, h4 {
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
+    white-space: pre-line;
 }
 
-#bio, #shoukaitext {
+
+#bio, #shoukaitext  {
     font-size: 1.8em;
     color: #555;
     margin-bottom: 20px;
@@ -105,10 +105,12 @@ h3, h4 {
 
 #rirekishou {
     font-size: 2em;
-    color: #333;
+    color: #1c2550;
     margin-bottom: 20px;
     padding: 20px;
+    font-weight: bold;
 }
+
 
 /* Сетка для разделов */
 .rirekishou-content {
@@ -139,20 +141,195 @@ h3, h4 {
     font-size: 1.6em;
 }
 
-#skills {
+.skills {
+        display: flex;
+        flex: row;
+        gap: 10px 20px;
+        font-size: 16px;
+}
+
+.skills span {
+    font-weight: 500;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 5px;
+    
+}
+
+#edu {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 20px;
 }
+#portfolio, #hobby{
+    font-size: 2em;
+    color: #1c2550;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
 
-.skill-item {
-    background: #f1f1f1;
-    padding: 10px;
-    border-radius: 25px;
-    font-size: 1.4em;
-    display: inline-block;
 }
+
+/* Стили для резюме */
+.resume_card {
+   
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.resume_card .year {
+    font-size: 1.5em;
+        font-weight: 500;
+        color: #053225;
+        width: 50px;
+}
+
+.flex #edu_section, #edu_section2, #edu_section3 {
+    font-size: 0.5em;
+    font-weight: 500;
+    margin: 0;
+    
+}
+
+.flex .edu_item,
+.edu_item2,
+.edu_item3, .occupation {
+    font-size: 1.0em;
+    color: #053225;
+    margin: 5px 0 0;
+}
+.icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap:5px;
+  }
+/* Cтили для портфолио */
+.image-container2 img {
+    width: 500px;
+    height: auto; /* Сохранение пропорций */
+    margin: 0; /* Убираем излишние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    border-radius: 3%;
+    display: block; /* Делаем изображение блочным элементом */
+}
+
+.portfolio_card {
+    display: flex; /* Гибкий контейнер */
+    flex-direction: row; /* Горизонтальное расположение */
+    align-items: center; /* Выравнивание по верхнему краю */
+    justify-content: flex-start; /* Прижимаем элементы к левому краю */
+    width: 80%;
+    max-width: 1300px;
+    height: auto; /* Высота автоматически подстраивается под содержимое */
+    margin: 10% auto; /* Центрируем блок по горизонтали */
+    padding: 20px; /* Добавляем внутренние отступы */
+    box-sizing: border-box;
+    gap: 50px; /* Отступ между картинкой и текстом */
+}
+
+#portfolio_text, #portfolio_text2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start; /* Текст выравнивается по левому краю */
+    font-size: 1.3em;
+    line-height: 1.5; /* Улучшенная читаемость */
+    color: #333;
+}
+
+/* Карусель */
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
 
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
@@ -160,7 +337,7 @@ h3, h4 {
         height: auto;
     }
 
-    .portfolio {
+    .shoukai {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -183,7 +360,6 @@ h3, h4 {
     #about {
         padding: 30px 15px;
     }
-
     .rirekishou-content {
         flex-direction: column;
         align-items: flex-start;
@@ -196,4 +372,5 @@ h3, h4 {
     .group {
         grid-template-columns: 1fr;
     }
+   
 }

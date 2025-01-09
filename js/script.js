@@ -18,13 +18,14 @@ function bindDataToElements(data) {
         }
     });
 }
+const skillsContainer = document.getElementById("skills");
 
 // Функция обновления содержимого элемента
 function updateElementContent(element, value) {
     if (Array.isArray(value)) {
         element.innerHTML = ''; // Очищаем список
         value.forEach(item => {
-            const li = document.createElement('li');
+            const li = document.createElement('span');
             li.textContent = item;
             element.appendChild(li);
         });
@@ -78,3 +79,30 @@ function loadDefaultLanguage() {
 
 // Загружаем язык при загрузке страницы
 window.onload = loadLanguageFromStorage;
+
+
+let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("carousel-slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
